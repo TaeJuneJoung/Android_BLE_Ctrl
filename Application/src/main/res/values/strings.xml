@@ -35,6 +35,5 @@
     <string name="menu_stop">Stop</string>
 
     <!-- Button -->
-    <string name="on_btn">LED ON</string>
-    <string name="off_btn">LED OFF</string>
+    <string name="send">Send</string>
 </resources>

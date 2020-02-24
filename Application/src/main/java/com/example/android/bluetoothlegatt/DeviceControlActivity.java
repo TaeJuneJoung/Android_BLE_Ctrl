@@ -32,6 +32,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
@@ -69,8 +70,8 @@ public class DeviceControlActivity extends Activity {
 
     private BluetoothGattCharacteristic bluetoothGattCharacteristicHM_10;
 
-    private Button mOnBtn;
-    private Button mOffBtn;
+    private EditText mSendData;
+    private Button mSendBtn;
 
     // Code to manage Service lifecycle.
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -188,24 +189,14 @@ public class DeviceControlActivity extends Activity {
         mConnectionState = (TextView) findViewById(R.id.connection_state);
         mDataField = (TextView) findViewById(R.id.data_value);
 
-        //Button
-        mOnBtn = (Button) findViewById(R.id.on_btn);
-        mOffBtn = (Button) findViewById(R.id.off_btn);
+        mSendData = (EditText) findViewById(R.id.send_data);
+        mSendBtn = (Button) findViewById(R.id.send_btn);
 
-        mOnBtn.setOnClickListener(new View.OnClickListener() {
+        mSendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String val = "on".toString();
-                bluetoothGattCharacteristicHM_10.setValue(val);
-                mBluetoothLeService.writeCharacteristic(bluetoothGattCharacteristicHM_10);
-                mBluetoothLeService.setCharacteristicNotification(bluetoothGattCharacteristicHM_10, true);
-            }
-        });
-
-        mOffBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String val = "off".toString();
+                String val = mSendData.getText().toString();
+                mConnectionState.setText(val);
                 bluetoothGattCharacteristicHM_10.setValue(val);
                 mBluetoothLeService.writeCharacteristic(bluetoothGattCharacteristicHM_10);
                 mBluetoothLeService.setCharacteristicNotification(bluetoothGattCharacteristicHM_10, true);

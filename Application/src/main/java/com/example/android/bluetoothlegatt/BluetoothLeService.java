@@ -127,6 +127,7 @@ public class BluetoothLeService extends Service {
         // This is special handling for the Heart Rate Measurement profile.  Data parsing is
         // carried out as per profile specifications:
         // http://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_measurement.xml
+        /*
         if (UUID_HEART_RATE_MEASUREMENT.equals(characteristic.getUuid())) {
             int flag = characteristic.getProperties();
             int format = -1;
@@ -151,22 +152,24 @@ public class BluetoothLeService extends Service {
             }
         }
 
+         */
 
-//        Log.v("AndroidLE", "broadcastUpdate()");
-//
-//        final byte[] data = characteristic.getValue();
-//
-//        Log.v("AndroidLE", "data.length: " + data.length);
-//
-//        if (data != null && data.length > 0) {
-//            final StringBuilder stringBuilder = new StringBuilder(data.length);
-//            for(byte byteChar : data) {
-//                stringBuilder.append(String.format("%02X ", byteChar));
-//
-//                Log.v("AndroidLE", String.format("%02X ", byteChar));
-//            }
-//            intent.putExtra(EXTRA_DATA, new String(data) + "\n" + stringBuilder.toString());
-//        }
+
+        Log.v("AndroidLE", "broadcastUpdate()");
+
+        final byte[] data = characteristic.getValue();
+
+        Log.v("AndroidLE", "data.length: " + data.length);
+
+        if (data != null && data.length > 0) {
+            final StringBuilder stringBuilder = new StringBuilder(data.length);
+            for(byte byteChar : data) {
+                stringBuilder.append(String.format("%02X ", byteChar));
+
+                Log.v("AndroidLE", String.format("%02X ", byteChar));
+            }
+            intent.putExtra(EXTRA_DATA, new String(data) + "\n" + stringBuilder.toString());
+        }
         sendBroadcast(intent);
     }
 

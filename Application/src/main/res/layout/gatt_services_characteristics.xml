@@ -70,14 +70,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
-        <Button
-            android:id="@+id/on_btn"
-            android:text="@string/on_btn"
+
+        <EditText
+            android:id="@+id/send_data"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="데이터를 넣어주세요"/>
+
         <Button
-            android:id="@+id/off_btn"
-            android:text="@string/off_btn"
+            android:id="@+id/send_btn"
+            android:text="@string/send"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>

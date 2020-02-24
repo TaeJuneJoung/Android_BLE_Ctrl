@@ -709,8 +709,6 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id off_btn
-id on_btn
 id parentPanel
 id progress_circular
 id progress_horizontal
@@ -733,6 +731,8 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
+id send_btn
+id send_data
 id shortcut
 id showCustom
 id showHome
@@ -875,9 +875,8 @@ string menu_disconnect
 string menu_scan
 string menu_stop
 string no_data
-string off_btn
-string on_btn
 string search_menu_title
+string send
 string status_bar_notification_info_overflow
 string title_devices
 string unknown_characteristic
