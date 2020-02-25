@@ -162,6 +162,7 @@ public class BluetoothLeService extends Service {
         Log.v("AndroidLE", "data.length: " + data.length);
 
         if (data != null && data.length > 0) {
+
             final StringBuilder stringBuilder = new StringBuilder(data.length);
             for(byte byteChar : data) {
                 stringBuilder.append(String.format("%02X ", byteChar));

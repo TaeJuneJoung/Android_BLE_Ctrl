@@ -68,7 +68,8 @@ public class DeviceControlActivity extends Activity {
     private final String LIST_NAME = "NAME";
     private final String LIST_UUID = "UUID";
 
-    private BluetoothGattCharacteristic bluetoothGattCharacteristicHM_10;
+    private BluetoothGattCharacteristic characteristicTX;
+    private BluetoothGattCharacteristic characteristicRX;
 
     private EditText mSendData;
     private Button mSendBtn;
@@ -116,19 +117,23 @@ public class DeviceControlActivity extends Activity {
                 // Show all the supported services and characteristics on the user interface.
                 displayGattServices(mBluetoothLeService.getSupportedGattServices());
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
-                displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
+                String value = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
+                if(value != null) {
+                    displayData(value);
+                    //Echo back received data, with something inserted
+                    final byte[] rxBytes = characteristicTX.getValue();
+                    final byte[] insertSomething = {(byte)'\n'};
+                    byte[] txBytes = new byte[insertSomething.length + rxBytes.length];
+                    System.arraycopy(insertSomething, 0, txBytes, 0, insertSomething.length);
+                    System.arraycopy(rxBytes, 0, txBytes, insertSomething.length, rxBytes.length);
 
-                //Echo back received data, with something inserted
-                final byte[] rxBytes = bluetoothGattCharacteristicHM_10.getValue();
-                final byte[] insertSomething = {(byte)'\n'};
-                byte[] txBytes = new byte[insertSomething.length + rxBytes.length];
-                System.arraycopy(insertSomething, 0, txBytes, 0, insertSomething.length);
-                System.arraycopy(rxBytes, 0, txBytes, insertSomething.length, rxBytes.length);
-
-                if(bluetoothGattCharacteristicHM_10 != null) {
-                    bluetoothGattCharacteristicHM_10.setValue(txBytes);
-                    mBluetoothLeService.writeCharacteristic(bluetoothGattCharacteristicHM_10);
-                    mBluetoothLeService.setCharacteristicNotification(bluetoothGattCharacteristicHM_10, true);
+//                    if(characteristicTX != null) {
+//                        characteristicTX.setValue(txBytes);
+//                        mBluetoothLeService.writeCharacteristic(characteristicTX);
+//                        mBluetoothLeService.setCharacteristicNotification(characteristicRX , true);
+//                    }
+                } else {
+                    Log.e(TAG, "EXTRA DATA Null");
                 }
             }
         }
@@ -196,10 +201,11 @@ public class DeviceControlActivity extends Activity {
             @Override
             public void onClick(View view) {
                 String val = mSendData.getText().toString();
+                //mSendBtn.setClickable(false); //Button clickable false
                 mConnectionState.setText(val);
-                bluetoothGattCharacteristicHM_10.setValue(val);
-                mBluetoothLeService.writeCharacteristic(bluetoothGattCharacteristicHM_10);
-                mBluetoothLeService.setCharacteristicNotification(bluetoothGattCharacteristicHM_10, true);
+                characteristicTX.setValue(val);
+                mBluetoothLeService.writeCharacteristic(characteristicTX);
+                mBluetoothLeService.setCharacteristicNotification(characteristicRX , true);
             }
         });
 
@@ -272,6 +278,7 @@ public class DeviceControlActivity extends Activity {
 
     private void displayData(String data) {
         if (data != null) {
+            //mSendBtn.setClickable(true);
             mDataField.setText(data);
         }
     }
@@ -318,7 +325,8 @@ public class DeviceControlActivity extends Activity {
 
                 //Check if it is "HM_10"
                 if(uuid.equals(SampleGattAttributes.HEART_RATE_MEASUREMENT)){
-                    bluetoothGattCharacteristicHM_10 = gattService.getCharacteristic(UUID_HM_10);
+                    characteristicTX = gattService.getCharacteristic(UUID_HM_10);
+                    characteristicRX = gattService.getCharacteristic(UUID_HM_10);
 
                 }
             }
