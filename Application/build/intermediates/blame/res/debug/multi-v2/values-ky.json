@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\june\\Desktop\\BluetoothLeGatt\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
+            "outputFile": "C:\\Users\\june\\Desktop\\Android_BLE_Ctrl\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
             "map": [
                 {
                     "source": "C:\\Users\\june\\.gradle\\caches\\transforms-2\\files-2.1\\f4d5d3213749717a63fe4d556ba1dd9c\\res\\values-ky\\values-ky.xml",
