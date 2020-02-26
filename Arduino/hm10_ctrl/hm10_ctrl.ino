@@ -3,20 +3,9 @@
 #define BT_TX A5
 
 const int ledPin = 11;
-bool ledState = false;
 char cmd;
-String message;
 
 SoftwareSerial HM10(BT_RX, BT_TX);
-
-boolean isValidNumber(String str) {
-  for(byte i=0;i<str.length();i++) {
-    if(isDigit(str.charAt(i))) {
-      return true;
-    }
-  }
-  return false;
-}
 
 void ledCtrl(bool state) {
   digitalWrite(ledPin, state);
@@ -26,7 +15,7 @@ void setup() {
   Serial.begin(9600);
   pinMode(BT_RX, INPUT);
   pinMode(BT_TX, OUTPUT);
-  Serial.println("\r\nPOWER ON!!");
+  Serial.println("\r\BT ON!!");
   HM10.begin(9600);
   pinMode(ledPin, OUTPUT);
 }
@@ -36,7 +25,7 @@ void loop() {
     cmd = HM10.read();
 
     switch(cmd) {
-      case '0': //stop
+      case '0': //Stop
         ledCtrl(false);
         HM10.write("STOP");
         break;
@@ -58,23 +47,15 @@ void loop() {
         break;
       case '5':
         ledCtrl(true);
-        HM10.write("자율주행");
+        HM10.write("조도 센서");
         break;
       case '6':
         ledCtrl(false);
-        HM10.write("적외선 감지");
+        HM10.write("진동 감지");
         break;
       case '7':
         ledCtrl(true);
-        HM10.write("조도 센서");
-        break;
-      case '8':
-        ledCtrl(false);
-        HM10.write("진동 센서");
-        break;
-      case '9':
-        ledCtrl(true);
-        HM10.write("초음파 센서");
+        HM10.write("가스 센서");
         break;
     }
   }

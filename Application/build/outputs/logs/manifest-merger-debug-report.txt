@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:20:1-54:12
-INJECTED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:20:1-54:12
-INJECTED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:20:1-54:12
+ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:20:1-53:12
+INJECTED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:20:1-53:12
+INJECTED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:20:1-53:12
 MERGED from [com.android.support:support-v13:28.0.0] C:\Users\june\.gradle\caches\transforms-2\files-2.1\7494c043a7871b1a4e77086eba0124d9\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\june\.gradle\caches\transforms-2\files-2.1\14f8715be8118deb1fff9e162c4f7eea\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\june\.gradle\caches\transforms-2\files-2.1\9b2f22aa3bbeafbf534f94e49c2a2c31\AndroidManifest.xml:17:1-22:12
@@ -33,8 +33,8 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\june\.gradle\cache
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\june\.gradle\caches\transforms-2\files-2.1\73a91ec42374a12e4ec74d262bacfa6d\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\june\.gradle\caches\transforms-2\files-2.1\34f4f749273ac368617c1c97f4b42cb0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\june\.gradle\caches\transforms-2\files-2.1\202d7657f61b025ce3f9156eb20ab06b\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:20:1-54:12
-INJECTED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:20:1-54:12
+INJECTED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:20:1-53:12
+INJECTED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:20:1-53:12
 	package
 		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:21:5-50
 	android:versionName
@@ -70,7 +70,7 @@ ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:38:22-76
 application
-ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:40:5-52:19
+ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:40:5-51:19
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\june\.gradle\caches\transforms-2\files-2.1\f4d5d3213749717a63fe4d556ba1dd9c\AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\june\.gradle\caches\transforms-2\files-2.1\f4d5d3213749717a63fe4d556ba1dd9c\AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\june\.gradle\caches\transforms-2\files-2.1\a41089da7e586f338e761075a50a516a\AndroidManifest.xml:22:5-23:19
@@ -80,35 +80,33 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\june\.grad
 	android:label
 		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:40:18-50
 	android:icon
-		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:41:9-45
+		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:41:9-40
 	android:theme
 		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:42:9-56
 activity#com.example.android.bluetoothlegatt.DeviceScanActivity
-ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:43:9-49:20
-	android:label
-		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:44:13-45
+ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:43:9-48:20
 	android:name
 		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:43:19-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:45:13-48:29
+ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:44:13-47:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:46:17-68
+ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:45:17-68
 	android:name
-		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:46:25-66
+		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:45:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:47:17-76
+ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:46:17-76
 	android:name
-		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:47:27-74
+		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:46:27-74
 activity#com.example.android.bluetoothlegatt.DeviceControlActivity
-ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:50:9-58
+ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:49:9-58
 	android:name
-		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:50:19-56
+		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:49:19-56
 service#com.example.android.bluetoothlegatt.BluetoothLeService
-ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:51:9-77
+ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:50:9-77
 	android:enabled
-		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:51:53-75
+		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:50:53-75
 	android:name
-		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:51:18-52
+		ADDED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml:50:18-52
 uses-sdk
 INJECTED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\june\Desktop\Android_BLE_Ctrl\Application\src\main\AndroidManifest.xml

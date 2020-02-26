@@ -15,16 +15,14 @@
 -->
 <resources>
     <string name="ble_not_supported">BLE is not supported</string>
-    <string name="label_data">Data:</string>
-    <string name="label_device_address">Device address:</string>
-    <string name="label_state">State:</string>
+    <string name="recieve_data">Data Value</string>
     <string name="no_data">No data</string>
     <string name="connected">Connected</string>
     <string name="disconnected">Disconnected</string>
     <string name="title_devices">BLE Device Scan</string>
     <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
 
-    <string name="unknown_device">Unknown device</string>
+    <string name="unknown_device">알수없는 기기</string>
     <string name="unknown_characteristic">Unknown characteristic</string>
     <string name="unknown_service">Unknown service</string>
 
@@ -35,5 +33,10 @@
     <string name="menu_stop">Stop</string>
 
     <!-- Button -->
-    <string name="send">Send</string>
+    <string name="forward">전진</string>
+    <string name="left">좌회전</string>
+    <string name="right">우회전</string>
+    <string name="back">후진</string>
+    <string name="stop">정지</string>
+    <string name="auto_drive">자율주행</string>
 </resources>

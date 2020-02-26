@@ -169,7 +169,7 @@ public class BluetoothLeService extends Service {
 
                 Log.v("AndroidLE", String.format("%02X ", byteChar));
             }
-            intent.putExtra(EXTRA_DATA, new String(data) + "\n" + stringBuilder.toString());
+            intent.putExtra(EXTRA_DATA, new String(data)); // + "\n" + stringBuilder.toString()
         }
         sendBroadcast(intent);
     }
