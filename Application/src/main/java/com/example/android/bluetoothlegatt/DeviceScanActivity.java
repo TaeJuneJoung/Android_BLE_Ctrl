@@ -56,7 +56,6 @@ public class DeviceScanActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setTitle(R.string.title_devices);
         mHandler = new Handler();
 
         int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 1;
