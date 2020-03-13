@@ -7,16 +7,37 @@
     android:layout_margin="10dp">
     <LinearLayout android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="45sp"
-        android:layout_marginBottom="30sp">
+        android:layout_height="80dp"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="15sp">
         <TextView
             android:id="@+id/data_value"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/recieve_data"
             android:gravity="center"
-            android:textSize="30sp"/>
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="30dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/auto_drice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/auto_drive"
+                android:textSize="15dp"/>
+            <Button
+                android:id="@+id/line_tracing"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/line_tracing"
+                android:textSize="15dp"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -35,6 +56,40 @@
                 android:layout_weight="1"
                 android:layout_margin="15dp"
                 android:src="@drawable/alarm"
+                android:background="@android:color/transparent"/>
+
+            <ImageButton
+                android:id="@+id/motion_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/motion" />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/vibe_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:src="@drawable/vibrate"
                 android:background="@android:color/transparent"/>
             <Space
                 android:layout_width="0dp"
@@ -63,12 +118,12 @@
             android:layout_weight="1"
             android:orientation="horizontal">
             <ImageButton
-                android:id="@+id/vibe_btn"
+                android:id="@+id/gas_btn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:src="@drawable/vibrate"
+                android:src="@drawable/gas"
                 android:background="@android:color/transparent"/>
             <ImageButton
                 android:id="@+id/left_btn"
@@ -104,14 +159,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal">
+
             <ImageButton
-                android:id="@+id/gas_btn"
+                android:id="@+id/temperature_btn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:src="@drawable/gas"
-                android:background="@android:color/transparent"/>
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/temperature" />
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

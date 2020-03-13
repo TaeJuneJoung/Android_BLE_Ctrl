@@ -31,6 +31,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
@@ -67,14 +68,20 @@ public class DeviceControlActivity extends Activity {
     private String mDeviceAddress;
 
     private TextView mDataText;
+    private Button mAutoDriveBtn;
+    private Button mLineTracingBtn;
+
     private ImageButton mForwardBtn;
     private ImageButton mLeftBtn;
     private ImageButton mRightBtn;
     private ImageButton mBackBtn;
     private ImageButton mStopBtn;
+
     private ImageButton mLightBtn;
     private ImageButton mVibeBtn;
     private ImageButton mGasBtn;
+    private ImageButton mTemperatureBtn;
+    private ImageButton mMotionBtn;
 
     // Code to manage Service lifecycle.
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -153,14 +160,20 @@ public class DeviceControlActivity extends Activity {
 
         // Sets up UI references.
         mDataText = (TextView) findViewById(R.id.data_value);
+        mAutoDriveBtn = (Button) findViewById(R.id.auto_drice);
+        mLineTracingBtn = (Button) findViewById(R.id.line_tracing);
+
         mForwardBtn = (ImageButton) findViewById(R.id.forward_btn);
         mLeftBtn = (ImageButton) findViewById(R.id.left_btn);
         mRightBtn = (ImageButton) findViewById(R.id.right_btn);
         mBackBtn = (ImageButton) findViewById(R.id.back_btn);
         mStopBtn = (ImageButton) findViewById(R.id.stop_btn);
+
         mLightBtn = (ImageButton) findViewById(R.id.led_btn);
         mVibeBtn = (ImageButton) findViewById(R.id.vibe_btn);
         mGasBtn = (ImageButton) findViewById(R.id.gas_btn);
+        mTemperatureBtn = (ImageButton) findViewById(R.id.temperature_btn);
+        mMotionBtn = (ImageButton) findViewById(R.id.motion_btn);
 
 
         mStopBtn.setOnClickListener(new View.OnClickListener() {
@@ -216,6 +229,34 @@ public class DeviceControlActivity extends Activity {
             @Override
             public void onClick(View view) {
                 sendData("7");
+            }
+        });
+
+        mTemperatureBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendData("t");
+            }
+        });
+
+        mMotionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendData("m");
+            }
+        });
+
+        mAutoDriveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendData("a");
+            }
+        });
+
+        mLineTracingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendData("l");
             }
         });
 
