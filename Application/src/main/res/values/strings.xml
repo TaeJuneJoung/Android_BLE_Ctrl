@@ -39,4 +39,5 @@
     <string name="back">후진</string>
     <string name="stop">정지</string>
     <string name="auto_drive">자율주행</string>
+    <string name="line_tracing">라인트레이싱</string>
 </resources>
