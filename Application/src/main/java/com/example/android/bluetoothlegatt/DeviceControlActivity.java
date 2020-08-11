@@ -82,6 +82,7 @@ public class DeviceControlActivity extends Activity {
     private ImageButton mGasBtn;
     private ImageButton mTemperatureBtn;
     private ImageButton mMotionBtn;
+    private ImageButton mPianoBtn;
 
     // Code to manage Service lifecycle.
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -174,6 +175,7 @@ public class DeviceControlActivity extends Activity {
         mGasBtn = (ImageButton) findViewById(R.id.gas_btn);
         mTemperatureBtn = (ImageButton) findViewById(R.id.temperature_btn);
         mMotionBtn = (ImageButton) findViewById(R.id.motion_btn);
+        mPianoBtn = (ImageButton) findViewById(R.id.piano_btn);
 
 
         mStopBtn.setOnClickListener(new View.OnClickListener() {
@@ -257,6 +259,13 @@ public class DeviceControlActivity extends Activity {
             @Override
             public void onClick(View view) {
                 sendData("l");
+            }
+        });
+
+        mPianoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendData("p");
             }
         });
 

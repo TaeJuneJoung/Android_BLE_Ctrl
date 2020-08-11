@@ -619,6 +619,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable piano
 drawable spider
 drawable stop
 drawable temperature
@@ -727,6 +728,7 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id parentPanel
+id piano_btn
 id progress_circular
 id progress_horizontal
 id radio
